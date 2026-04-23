@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Ashly, con amor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Dancing+Script:wght@400;500;600;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background audio -->
+  <audio id="bg-audio" src="bg-audio.mp4" loop preload="auto"></audio>
+
+  <!-- Audio control button -->
+  <button class="audio-btn" id="audio-btn" aria-label="Reproducir música">
+    <span class="audio-icon">♪</span>
+    <span class="audio-label">reproducir</span>
+  </button>
+
+  <!-- Film grain -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Nav dots -->
+  <nav class="section-nav" aria-label="Secciones">
+    <a href="#hero"             class="nav-dot active" aria-label="Inicio"></a>
+    <a href="#gallery"          class="nav-dot"        aria-label="Fotos"></a>
+    <a href="#cassette-section" class="nav-dot"        aria-label="Casset"></a>
+    <a href="#letter-section"   class="nav-dot"        aria-label="Carta"></a>
+    <a href="#song-section"     class="nav-dot"        aria-label="Canción"></a>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="hero" class="section">
+    <div class="universe" id="universe"></div>
+
+    <div class="hero-content">
+      <p class="eyebrow">para siempre mía,</p>
+      <h1 class="hero-name">Ashly</h1>
+
+      <div class="ornament">
+        <span class="orn-line"></span>
+        <span class="orn-diamond">◆</span>
+        <span class="orn-line"></span>
+      </div>
+
+      <p class="hero-sub">
+        Porque aunque el destino nos separe,<br>
+        cada momento contigo fue felicidad pura,<br>
+        cada instante a tu lado valió la pena,<br>
+        y quedará siempre en mi memoria
+      </p>
+      <p class="hero-from">— Samuel</p>
+    </div>
+
+    <a href="#gallery" class="scroll-hint" aria-label="Ir abajo">
+      <span class="scroll-text">desliza</span>
+      <span class="scroll-arrow">↓</span>
+    </a>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section id="gallery" class="section gallery-section">
+    <div class="section-intro reveal">
+      <p class="section-label">momentos guardados</p>
+      <h2 class="section-title">Nuestras Fotos</h2>
+      <p class="section-desc">Quisiera poder teletransportarme al momento de cada una de las fotos que tenemos juntos, y estando ahí, disfrutar más de lo que disfruté</p>
+    </div>
+
+    <div class="carousel-wrapper reveal">
+      <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Anterior">&#8592;</button>
+
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carousel-track">
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0244.JPEG" alt="Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0248.JPEG" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0251.JPEG" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0264.JPEG" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0148.JPG" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0204.JPEG" alt="Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0207.JPEG" alt="Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0218.JPG" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0224.JPEG" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0226.JPEG" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_4206.jpg" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_4746.jpg" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_4777.jpg" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_5090.jpg" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_9026.JPEG" alt="Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_9752.JPEG" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/IMG_0230.JPEG" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/foto3.jpg" alt="Ashly">
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="polaroid">
+              <div class="polaroid-img">
+                <img src="fotos/foto9.jpg" alt="Samuel y Ashly">
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end track -->
+      </div><!-- end viewport -->
+
+      <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Siguiente">&#8594;</button>
+
+      <div class="carousel-dots" id="carousel-dots"></div>
+    </div>
+
+  </section>
+
+  <!-- ==================== CASSETTE ==================== -->
+  <section id="cassette-section" class="section">
+    <div class="section-intro reveal">
+      <p class="section-label">Aunque quedaron muchas cosas por decir, quiero que escuches unas pocas palabras para ti</p>
+      <p class="section-desc" id="cassette-instruction">arrastra el casset al reproductor para escuchar...</p>
+    </div>
+
+    <div class="cassette-stage reveal">
+
+      <!-- ---- Cassette Tape ---- -->
+      <div class="cassette-area" id="cassette-area">
+        <div class="cassette" id="cassette" draggable="true" title="Arrástrame al reproductor">
+
+          <div class="cassette-body">
+            <!-- Top notches -->
+            <div class="c-notch-row">
+              <div class="c-notch"></div>
+              <div class="c-notch-gap"></div>
+              <div class="c-notch"></div>
+            </div>
+
+            <!-- Main face -->
+            <div class="c-face">
+              <div class="c-window" id="cw-left">
+                <div class="c-reel" id="reel-left">
+                  <div class="c-reel-inner">
+                    <div class="c-spoke"></div>
+                    <div class="c-spoke"></div>
+                    <div class="c-spoke"></div>
+                    <div class="c-hub"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="c-label">
+                <p class="cl-side">SIDE A · 60 MIN</p>
+                <p class="cl-title">Para Ashly</p>
+                <p class="cl-artist">Samuel</p>
+                <div class="cl-bars">
+                  <span class="cl-bar"></span>
+                  <span class="cl-bar"></span>
+                  <span class="cl-bar"></span>
+                </div>
+              </div>
+
+              <div class="c-window" id="cw-right">
+                <div class="c-reel" id="reel-right">
+                  <div class="c-reel-inner">
+                    <div class="c-spoke"></div>
+                    <div class="c-spoke"></div>
+                    <div class="c-spoke"></div>
+                    <div class="c-hub"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom tape slot -->
+            <div class="c-bottom">
+              <div class="c-tape-guide tg-l"></div>
+              <div class="c-tape-path"></div>
+              <div class="c-tape-guide tg-r"></div>
+            </div>
+          </div>
+
+        </div><!-- end .cassette -->
+
+        <p class="drag-hint-text">
+          <span id="hint-desk">arrastra hacia el reproductor →</span>
+          <span id="hint-mob" style="display:none">toca y arrastra hacia el reproductor ↓</span>
+        </p>
+      </div><!-- end .cassette-area -->
+
+      <!-- ---- Player ---- -->
+      <div class="player" id="player">
+        <div class="player-body">
+
+          <!-- Brand + LED -->
+          <div class="player-top-bar">
+            <div class="player-brand">
+              <span class="brand-name">MEMO</span>
+              <span class="brand-sub">tape player</span>
+            </div>
+            <div class="player-led" id="player-led">
+              <span class="led-dot"></span>
+              <span class="led-label">STANDBY</span>
+            </div>
+          </div>
+
+          <!-- Deck window -->
+          <div class="player-deck" id="player-deck">
+            <div class="deck-slot">
+              <!-- Empty state -->
+              <div class="slot-empty" id="slot-empty">
+                <p>INSERT<br>TAPE</p>
+              </div>
+              <!-- Cassette when inserted -->
+              <div class="cip" id="cip">
+                <div class="cip-window">
+                  <div class="cip-reel spinning" id="cip-reel-left">
+                    <div class="cip-reel-inner">
+                      <div class="cip-spoke"></div>
+                      <div class="cip-spoke"></div>
+                      <div class="cip-spoke"></div>
+                      <div class="cip-hub"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="cip-label">
+                  <p class="cip-title">Para Ashly</p>
+                  <p class="cip-sub">Samuel</p>
+                </div>
+                <div class="cip-window">
+                  <div class="cip-reel spinning" id="cip-reel-right">
+                    <div class="cip-reel-inner">
+                      <div class="cip-spoke"></div>
+                      <div class="cip-spoke"></div>
+                      <div class="cip-spoke"></div>
+                      <div class="cip-hub"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="deck-drop-hint">↓ suéltalo aquí</p>
+          </div><!-- end .player-deck -->
+
+          <!-- Controls -->
+          <div class="player-controls">
+            <button class="ctrl-btn" id="btn-rw"   aria-label="Retroceder">⏮</button>
+            <button class="ctrl-btn play-btn" id="btn-play" aria-label="Play">▶</button>
+            <button class="ctrl-btn" id="btn-ff"   aria-label="Avanzar">⏭</button>
+            <button class="ctrl-btn stop-btn" id="btn-stop" aria-label="Stop">■</button>
+          </div>
+
+          <!-- Speaker + VU -->
+          <div class="player-bottom">
+            <div class="speaker-grill"></div>
+            <div class="vu-meter" id="vu-meter">
+              <span class="vu-bar"></span>
+              <span class="vu-bar"></span>
+              <span class="vu-bar"></span>
+              <span class="vu-bar"></span>
+              <span class="vu-bar"></span>
+              <span class="vu-bar"></span>
+              <span class="vu-bar"></span>
+              <span class="vu-bar"></span>
+            </div>
+          </div>
+
+        </div><!-- end .player-body -->
+      </div><!-- end .player -->
+
+    </div><!-- end .cassette-stage -->
+
+    <audio id="audio" src="….m4a" preload="none"></audio>
+  </section>
+
+  <!-- Password modal -->
+  <div class="pw-overlay" id="pw-overlay">
+    <div class="pw-card">
+      <p class="pw-icon">♡</p>
+      <h3 class="pw-title">Solo tú sabes la clave</h3>
+      <p class="pw-subtitle">introduce la palabra para escuchar...</p>
+      <div class="pw-field-wrap">
+        <input
+          class="pw-input"
+          id="pw-input"
+          type="password"
+          placeholder="···········"
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </div>
+      <p class="pw-error" id="pw-error">eso no suena bien... intenta de nuevo</p>
+      <button class="pw-btn" id="pw-btn">escuchar ♪</button>
+    </div>
+  </div>
+
+  <!-- ==================== LETTER ==================== -->
+  <section id="letter-section" class="section">
+    <div class="section-intro reveal">
+      <p class="section-label">una pequeña dedicatoria</p>
+      <h2 class="section-title">Para Ti</h2>
+      <p class="section-desc" id="heart-hint-text">toca el corazón...</p>
+    </div>
+
+    <div class="heart-stage reveal">
+      <div class="heart-btn" id="heart-btn" title="Tócame">
+        <div class="heart-half h-left">
+          <div class="heart-shape"></div>
+        </div>
+        <div class="heart-half h-right">
+          <div class="heart-shape"></div>
+        </div>
+        <div class="heart-crack-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Letter overlay (fuera de la section para evitar problemas con z-index) -->
+  <div class="letter-overlay" id="letter-overlay">
+    <div class="letter-paper">
+      <button class="letter-close" id="letter-close" aria-label="Cerrar">✕</button>
+      <div class="letter-scroll">
+        <p class="letter-greeting">Hasta Luego,</p>
+        <p class="letter-body">
+          El tiempo pasa rápido y a veces lento<br>
+          dependiendo de cómo te sientas en el momento.<br>
+          Recuerdo aún cuando te besé y cómo fue ese sentimiento,<br>
+          los días pasaron volando y contigo me sentía contento.<br><br>
+
+          No llegamos ni al 30% y quisiera volver de nuevo,<br>
+          nos cortaron las alas comenzando a agarrar vuelo<br>
+          y no alcanzará la vida pa' superar este duelo.<br>
+          Si morimos te busco y te hago el amor en el cielo.<br><br>
+
+          Tu marca en el brazo y tus lunares, ¿cómo olvidar?<br>
+          Tus abrazos, tus besos y tu manera de hablar,<br>
+          tu amor tan tierno, tan lindo e incondicional...<br>
+          hasta que deje de latir mi corazón te va a amar.<br><br>
+
+          Y no te va a olvidar, no te voy a olvidar.<br>
+          Si contigo todo se sentía real,<br>
+          me va a doler no poder verte en la realidad,<br>
+          pero va a ser imposible dejarte de esperar.<br><br>
+
+          Y aquí, frente a la playita, estaré solo,<br>
+          mirando tus fotos, solitario el lobo,<br>
+          pensando en la primera vez que te besé.<br>
+          Tú me tendrás viviendo siempre en el 2026.<br><br>
+
+          Cuando te ponías mi gorra y te llevaba a las 10,<br>
+          cuando te acostabas en mi hombro manejando al volver,<br>
+          despeinada diciéndome que eras mía y yo tuyo también,<br>
+          y un día te dejé en tu casa y fue la última vez.<br><br>
+
+          Ya te extraño, pienso en ti y me hace daño,<br>
+          estaré triste y cantándote despechado en el baño,<br>
+          mirando al techo, ya no puedo dormir,<br>
+          tu recuerdo se quedará siempre aquí.<br><br>
+
+          Mami, espero que tú también, porque yo solo pienso en ti,<br>
+          extrañaré por siempre que tú estés encima de mí.<br>
+          "Y aquí estaré esperándote dándome mi puesto,"<br>
+          sabes que para ti siempre estaré dispuesto.<br><br>
+
+          Seguiré vivo solo para decirte te amo y seguir con el cuento,<br>
+          guardaré mi amor para dártelo si te reencuentro.
+        </p>
+        <p class="letter-sign">— Samuel ♡</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SONG ==================== -->
+  <section id="song-section" class="section lyrics-section">
+
+    <div class="section-intro reveal">
+      <!-- Heartbeat emblem -->
+      <div class="heartbeat-emblem">
+        <span class="emblem-letter">A</span>
+        <svg class="heartbeat-svg" viewBox="0 0 400 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hbGrad" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%"   stop-color="#c8a463"/>
+              <stop offset="30%"  stop-color="#d4a878"/>
+              <stop offset="50%"  stop-color="#c27878"/>
+              <stop offset="70%"  stop-color="#d4a878"/>
+              <stop offset="100%" stop-color="#c8a463"/>
+            </linearGradient>
+          </defs>
+          <!-- EKG / heartbeat line -->
+          <path d="M 0,62 L 38,62 L 44,52 L 50,62 L 66,62 L 73,8 L 79,78 L 85,62 L 155,62 L 245,62 L 312,62 L 318,8 L 324,78 L 330,62 L 346,62 L 352,52 L 358,62 L 400,62"
+            stroke="url(#hbGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Heart outline, tip touching baseline at y=62 -->
+          <path d="M 200,62 C 178,50 154,40 154,28 C 154,16 162,8 173,8 C 183,8 191,16 200,28 C 209,16 217,8 227,8 C 238,8 246,16 246,28 C 246,40 222,50 200,62 Z"
+            stroke="url(#hbGrad)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="emblem-letter">S</span>
+      </div>
+
+    </div>
+
+    <div class="lyrics-grid reveal">
+      <div class="lyrics-card"><img src="fotos/IMG_0271.JPEG" alt="Si Estás Con Alguien"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0299.JPEG" alt="Hasta Nunca"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0274.JPEG" alt="Forever Tu Gantel"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0308.JPEG" alt="La Casa"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0283.JPEG" alt="Contigo Na Más"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0317.JPEG" alt="Nota"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0289.JPEG" alt="Alambre Púa"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0325.JPEG" alt="Querer Querernos"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0293.JPEG" alt="VeLDÁ"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0329.JPEG" alt="Pensando en Ti"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0295.JPEG" alt="Stupid Love Story"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0333.JPEG" alt="PolvosQueNoSeOlvidan"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0278.JPEG" alt="Wo Oh Oh"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0360.JPEG" alt=""></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0342.JPEG" alt="Una Noti"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0303.JPEG" alt="Contigo"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0350.JPEG" alt="Como Mirarte"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0306.JPEG" alt="Por Si Mañana No Estoy"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0314.JPEG" alt="Me Rehúso"></div>
+      <div class="lyrics-card"><img src="fotos/IMG_0357.JPEG" alt="La Vida Sin Ti"></div>
+    </div>
+
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-ornament">
+      <span class="orn-line"></span>
+      <span class="orn-diamond">◆</span>
+      <span class="orn-line"></span>
+    </div>
+    <p class="footer-label">hecho con amor infinito,</p>
+    <p class="footer-names">Samuel <span class="footer-heart">♡</span> Ashly</p>
+    <p class="footer-forever">siempre.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

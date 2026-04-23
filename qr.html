@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR — Para Ashly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #090604;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* Stars */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 12% 18%, rgba(234,214,184,0.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 35% 72%, rgba(200,164,99,0.5) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 58% 9%, rgba(234,214,184,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 45%, rgba(194,120,120,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 91% 83%, rgba(234,214,184,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 22% 60%, rgba(200,164,99,0.4) 0%, transparent 100%),
+        radial-gradient(1.5px 1.5px at 67% 55%, rgba(234,214,184,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 44% 38%, rgba(194,120,120,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 76% 22%, rgba(234,214,184,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 5% 90%, rgba(200,164,99,0.4) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(160deg, #120c08 0%, #1a0f0a 50%, #0e0806 100%);
+      border: 1px solid rgba(200,164,99,0.25);
+      border-radius: 20px;
+      padding: 44px 40px 40px;
+      text-align: center;
+      width: 340px;
+      box-shadow:
+        0 0 60px rgba(200,164,99,0.08),
+        0 0 120px rgba(194,120,120,0.04),
+        inset 0 1px 0 rgba(200,164,99,0.12);
+    }
+
+    /* Corner ornaments */
+    .card::before, .card::after {
+      content: '✦';
+      position: absolute;
+      font-size: 0.7rem;
+      color: rgba(200,164,99,0.4);
+    }
+    .card::before { top: 14px; left: 18px; }
+    .card::after  { top: 14px; right: 18px; }
+
+    .title {
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(200,164,99,0.55);
+      margin-bottom: 6px;
+    }
+
+    .name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.4rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #c8a463 0%, #c27878 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 28px;
+    }
+
+    /* QR wrapper */
+    .qr-wrap {
+      position: relative;
+      display: inline-block;
+      padding: 14px;
+      background: #f5ede0;
+      border-radius: 12px;
+      box-shadow:
+        0 0 0 1px rgba(200,164,99,0.3),
+        0 0 24px rgba(200,164,99,0.15),
+        0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    #qrcode canvas, #qrcode img {
+      display: block;
+      border-radius: 4px;
+    }
+
+    /* Heart on QR */
+    .qr-heart {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 22px;
+      height: 22px;
+      background: #090604;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      line-height: 1;
+      color: #c27878;
+      border: 1px solid rgba(200,164,99,0.2);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 30px 0 22px;
+      color: rgba(200,164,99,0.3);
+      font-size: 0.6rem;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(200,164,99,0.25), transparent);
+    }
+
+    .pw-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(194,120,120,0.55);
+      margin-bottom: 8px;
+    }
+
+    .pw-value {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: #c8a463;
+      letter-spacing: 0.05em;
+      text-shadow: 0 0 20px rgba(200,164,99,0.3);
+    }
+
+    .footer-note {
+      margin-top: 22px;
+      font-size: 0.7rem;
+      font-style: italic;
+      color: rgba(234,214,184,0.2);
+      letter-spacing: 0.05em;
+    }
+
+    /* Corner roses */
+    .rose-tl, .rose-br {
+      position: absolute;
+      font-size: 0.9rem;
+      opacity: 0.18;
+    }
+    .rose-tl { bottom: 16px; left: 20px; }
+    .rose-br { bottom: 16px; right: 20px; }
+
+    @media print {
+      body { background: white; }
+      body::before { display: none; }
+      .card {
+        background: white;
+        border: 1px solid #c8a463;
+        box-shadow: none;
+        color: #333;
+      }
+      .title, .pw-label, .footer-note { color: #888; -webkit-text-fill-color: #888; }
+      .name, .pw-value { -webkit-text-fill-color: #c8a463; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="title">escanea para abrir</p>
+    <p class="name">Para Ashly ♡</p>
+
+    <div class="qr-wrap">
+      <div id="qrcode"></div>
+      <div class="qr-heart">♥</div>
+    </div>
+
+    <div class="divider">✦</div>
+
+    <p class="pw-label">contraseña del casete</p>
+    <p class="pw-value">MiaPorSiempre</p>
+
+    <p class="footer-note">de Samuel, con amor</p>
+
+    <span class="rose-tl">✿</span>
+    <span class="rose-br">✿</span>
+  </div>
+
+  <script>
+    new QRCode(document.getElementById('qrcode'), {
+      text: 'https://aquamarine-cupcake-ee0451.netlify.app/',
+      width: 220,
+      height: 220,
+      colorDark: '#1a0a06',
+      colorLight: '#f5ede0',
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>
